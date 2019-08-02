@@ -196,6 +196,14 @@ class WebView extends React.Component<IOSWebViewProps, State> {
     );
   };
 
+  focus = () => {
+    UIManager.dispatchViewManagerCommand(
+      this.getWebViewHandle(),
+      this.getCommands().focus,
+      null
+    )
+  };
+
   /**
    * We return an event with a bunch of fields including:
    *  url, title, loading, canGoBack, canGoForward

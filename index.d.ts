@@ -34,6 +34,8 @@ declare class WebView extends Component<WebViewProps> {
      * Executes the JavaScript string.
      */
     injectJavaScript: (script: string) => void;
+
+    focus: () => void;
 }
 
 export {WebView};
